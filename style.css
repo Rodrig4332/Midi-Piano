@@ -1,0 +1,45 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    background-color: rgb(8, 70, 163);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.piano {
+    display: flex;
+}
+
+.key {
+    height: calc(var(--width) *3);
+    width: var(--width);
+
+}
+
+.white {
+    background-color: white;
+    --width: 100px;
+    border: 1px solid #333;
+}
+
+.white.active {
+    background-color: #bab9b9;
+}
+
+.black {
+    --width: 60px;
+    background-color: black;
+    margin-left: calc(var(--width) / -2);
+    margin-right: calc(var(--width) / -2);
+    z-index: 2;
+}
+
+.black.active {
+    background-color: #333;
+}
